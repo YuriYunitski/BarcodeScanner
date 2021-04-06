@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yunitski.barcodescanner">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/camera_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/camera_icon"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BarcodeScanner">
+        <activity android:name=".PhotoActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name=".Enter"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <provider
+            &lt;!&ndash;android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.barcodescanner.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">&ndash;&gt;
+
+        </provider>
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhotoInvApp</string>
+    <string name="applyu">применить</string>
+    <string name="scanF">Scan</string>
+    <string name="code">ШТРИХ-КОД:</string>
+    <string name="photo">photo</string>
+    <string name="photo_text">ФОТО:</string>
+    <string name="loc">РАСПОЛОЖЕНИЕ:</string>
+    <string name="save">save</string>
+</resources>
